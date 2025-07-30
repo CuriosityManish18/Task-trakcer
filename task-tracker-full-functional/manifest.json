@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Task Tracker",
+  "version": "1.0",
+  "description": "Track your task every time you open a new tab.",
+  "chrome_url_overrides": { "newtab": "login.html" },
+  "permissions": ["storage"]
+}

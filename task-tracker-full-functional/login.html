@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome & Start Journey</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Denton Condensed Test', sans-serif;
+      background-color: #F5F5F5;
+      display: flex; align-items: center; justify-content: center;
+      height: 100vh; color: #141414;
+    }
+    .container {
+      width: 764px; max-width: 90%;
+      display: flex; flex-direction: column; align-items: center; gap: 40px;
+    }
+    h1 {
+      font-family: 'Denton Condensed Test', sans-serif;
+      font-size: 56px; font-weight: 400;
+      text-align: center; white-space: nowrap;
+    }
+    form {
+      width: 100%; max-width: 448px;
+      display: flex; flex-direction: column; gap: 22px;
+    }
+    label {
+      display: flex; flex-direction: column; gap: 8px;
+      font-size: 20px; font-weight: 500; color: #191919;
+    }
+    input {
+      height: 57px; padding: 10px; font-size: 16px;
+      border: 1px solid #DDD4D4; border-radius: 8px;
+    }
+    .cta {
+      width: 447px; height: 87px; margin-top: 20px;
+      position: relative; background: #31A93E; border-radius: 20px;
+      display: flex; align-items: flex-start; justify-content: center;
+    }
+    .cta .inner {
+      width: 447px; height: 69px;
+      background: #CAFFCE; border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; top: 9px;
+    }
+    .cta .inner span {
+      font-family: 'SF Pro Display', sans-serif;
+      font-weight: 500; font-size: 20px;
+      color: #31A93E; letter-spacing: 1.6px; white-space: nowrap;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome, let’s have some introduction</h1>
+    <form id="login-form">
+      <label for="name">Your name<input type="text" id="name" required></label>
+      <label for="mission">Your mission<input type="text" id="task" required></label>
+      <label for="days">Number of days<input type="number" id="days" min="1" required></label>
+    </form>
+    <div class="cta" id="start-btn">
+      <div class="inner"><span>START YOUR JOURNEY</span></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

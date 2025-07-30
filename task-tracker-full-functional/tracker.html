@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Denton Condensed Test', sans-serif;
+      background: #F5F5F5;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh; color: #141414;
+    }
+    .frame {
+      display: flex; flex-direction: column;
+      max-width: 692px; padding: 20px;
+      align-items: center; justify-content: center; gap: 56px;
+    }
+    .countdown__header { text-align: center; gap: 1px; display: flex; flex-direction: column; }
+    #title {
+      font-family: 'Denton Condensed Test', sans-serif;
+      font-weight: 400; font-size: 56px; white-space: nowrap;
+    }
+    #subtitle {
+      font-family: 'Denton Condensed Test', sans-serif;
+      font-weight: 900; font-size: 56px; white-space: nowrap;
+    }
+    .box {
+      display: grid; grid-template-columns: repeat(5, 79px); grid-gap: 8px;
+    }
+    .box div { width: 79px; height: 80px; background: #CAFFCE; border-radius: 8px; }
+    .box div.completed { background: #31A93E; }
+    .reset-btn {
+      margin-top: 40px; padding: 12px 24px;
+      background: #31A93E; color: white;
+      border: none; border-radius: 8px;
+      cursor: pointer; font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="countdown__header">
+      <h1 id="title"></h1>
+      <p id="subtitle"></p>
+    </div>
+    <div class="box" id="grid"></div>
+    <button class="reset-btn" id="reset-btn">NEW JOURNEY</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
